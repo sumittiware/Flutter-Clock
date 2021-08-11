@@ -1,4 +1,4 @@
-# Clock_app
+# Flutter Clock
 
 A new Flutter project.
 
