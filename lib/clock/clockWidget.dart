@@ -1,7 +1,6 @@
 import 'dart:async';
-
-import 'package:flutter/material.dart';
 import 'dart:math';
+import 'package:flutter/material.dart';
 
 class ClockView extends StatefulWidget {
   @override
@@ -9,11 +8,10 @@ class ClockView extends StatefulWidget {
 }
 
 class _ClockViewState extends State<ClockView> {
-  @override
   bool _disposed = false;
-  void initState() {
-    // TODO: implement initState
 
+  @override
+  void initState() {
     Timer.periodic(Duration(seconds: 1), (timer) {
       if (!_disposed) {
         setState(() {});
@@ -24,7 +22,6 @@ class _ClockViewState extends State<ClockView> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     _disposed = true;
     super.dispose();
   }

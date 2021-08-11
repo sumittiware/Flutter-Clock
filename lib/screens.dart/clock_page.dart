@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:Clock_app/clock/colck_view.dart';
+import 'package:Clock_app/clock/clockWidget.dart';
 
 class ClockPage extends StatelessWidget {
-  static const routename = '/clockPage';
   @override
   Widget build(BuildContext context) {
     var now = DateTime.now();
@@ -17,23 +16,24 @@ class ClockPage extends StatelessWidget {
       offsetSign = '+';
     }
 
-    final height = MediaQuery.of(context).size.height -
-        MediaQuery.of(context).padding.top -
-        kToolbarHeight;
-    final width = MediaQuery.of(context).size.width;
-
-    return Container(
-      color: Color(0xFF2D2F41),
-      height: height,
-      width: width,
-      child: SingleChildScrollView(
-        child: SizedBox(
-          height: height,
+    return Scaffold(
+      backgroundColor: Color(0xFF2D2F41),
+      body: SingleChildScrollView(
+        child: Container(
+          height: MediaQuery.of(context).size.height,
           child: Padding(
             padding: EdgeInsets.all(10),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 40),
+                  child: Text("Flutter Clock",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 40)),
+                ),
                 Flexible(
                   flex: 2,
                   fit: FlexFit.tight,
