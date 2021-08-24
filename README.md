@@ -1,6 +1,10 @@
 # Flutter Clock
 
-A new Flutter project.
+A simple clock made in flutter using Flutter Canvas
+
+Screenshots
+<br>
+<img src="Screenshots/Screenshot_20210811-114052.jpg" height=700/>
 
 ## Getting Started
 
